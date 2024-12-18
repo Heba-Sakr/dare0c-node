@@ -1,0 +1,37 @@
+From fb0aef1c88df25c76451bf19c9225a214c76eb7e Mon Sep 17 00:00:00 2001
+From: Heba Ali <85513159+Heba-Sakr@users.noreply.github.com>
+Date: Wed, 18 Dec 2024 20:48:53 +0100
+Subject: [PATCH] Implement reverse method in Reverser class
+
+---
+ lib/assignment.js | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+
+diff --git a/lib/assignment.js b/lib/assignment.js
+index a64e34f..303e8f0 100644
+--- a/lib/assignment.js
++++ b/lib/assignment.js
+@@ -1,11 +1,14 @@
+ function Reverser() {
+-
+   this.reverse = function(text) {
+-    // Do not use any foreign library in your solution!
+-    // You're supposed to come up with your own solution.
+-    return text;
+-  }
+-
++    // Create an empty string to store the reversed result
++    let reversedText = '';
++    
++    // Iterate through the input text in reverse order
++    for (let i = text.length - 1; i >= 0; i--) {
++      reversedText += text[i];
++    }    
++    return reversedText;
++  };
+ }
+ 
+ module.exports = Reverser;
+-- 
+2.42.0.windows.2
+
